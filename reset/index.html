@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redefinir senha — Anatomify</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #FDF8E1; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .card { background: #FFFFFF; border-radius: 20px; padding: 40px 32px; max-width: 420px; width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    h1 { font-size: 24px; color: #1A1A1A; text-align: center; margin-bottom: 8px; }
+    .subtitle { font-size: 14px; color: #666; text-align: center; margin-bottom: 24px; }
+    label { display: block; font-size: 13px; color: #555; margin-bottom: 6px; margin-top: 12px; }
+    input { width: 100%; padding: 14px 16px; border: 2px solid #EEE; border-radius: 12px; font-size: 15px; font-family: inherit; outline: none; transition: border-color 0.2s; }
+    input:focus { border-color: #1A1A1A; }
+    button { width: 100%; background: #1A1A1A; color: #FDF8E1; border: none; padding: 16px; border-radius: 30px; font-size: 15px; font-weight: 500; cursor: pointer; margin-top: 20px; font-family: inherit; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .msg { margin-top: 16px; padding: 12px; border-radius: 12px; font-size: 14px; text-align: center; }
+    .msg.success { background: #F0FDF4; color: #22C55E; }
+    .msg.error { background: #FEE2E2; color: #FF3B30; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Redefinir senha</h1>
+    <p class="subtitle">Digite sua nova senha abaixo</p>
+
+    <form id="form">
+      <label for="password">Nova senha</label>
+      <input type="password" id="password" required minlength="6" placeholder="Mínimo 6 caracteres">
+
+      <label for="confirm">Confirmar senha</label>
+      <input type="password" id="confirm" required minlength="6" placeholder="Digite novamente">
+
+      <button type="submit" id="submitBtn">Redefinir senha</button>
+    </form>
+
+    <div id="msg" class="msg hidden"></div>
+  </div>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+    const SUPABASE_URL = 'https://smytwdstipfzluwaroua.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNteXR3ZHN0aXBmemx1d2Fyb3VhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczODYwOTgsImV4cCI6MjA5Mjk2MjA5OH0.qNJmWUhH_Kcyr02T5qzGsHIEEJglTq9PpIam2LQ26og';
+
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const form = document.getElementById('form');
+    const msg = document.getElementById('msg');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function showMsg(text, type) {
+      msg.textContent = text;
+      msg.className = 'msg ' + type;
+    }
+
+    // Ao carregar, Supabase automaticamente pega o token do hash da URL
+    // e cria uma sessão temporária que permite chamar updateUser
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        // Session pronta — usuário pode redefinir
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+
+      if (password !== confirm) {
+        showMsg('As senhas não coincidem', 'error');
+        return;
+      }
+      if (password.length < 6) {
+        showMsg('A senha precisa ter pelo menos 6 caracteres', 'error');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Salvando...';
+
+      const { error } = await supabase.auth.updateUser({ password });
+
+      if (error) {
+        showMsg('Erro: ' + error.message, 'error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Redefinir senha';
+        return;
+      }
+
+      showMsg('Senha redefinida com sucesso! Você pode voltar ao app e entrar com sua nova senha.', 'success');
+      form.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
