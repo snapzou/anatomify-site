@@ -21,9 +21,8 @@ const LANGS = {
   function detectLang() {
     const params = new URLSearchParams(location.search);
     const q = params.get('lang');
-    if (q && LANGS[q]) return DOC_TYPE === 'support' && q === 'es' ? 'en' : q;
+    if (q && LANGS[q]) return q;
     const nav = (navigator.language || 'pt').slice(0, 2);
-    if (DOC_TYPE === 'support' && nav === 'es') return 'en';
     return LANGS[nav] ? nav : 'pt';
   }
   
@@ -47,10 +46,7 @@ const LANGS = {
   function renderChrome() {
     const switcher = document.getElementById('lang-switcher');
     switcher.innerHTML = '';
-    const availableLangs = DOC_TYPE === 'support'
-      ? Object.keys(LANGS).filter(code => code !== 'es')
-      : Object.keys(LANGS);
-    availableLangs.forEach(code => {
+    Object.keys(LANGS).forEach(code => {
       const btn = document.createElement('button');
       btn.className = 'lang-btn' + (code === currentLang ? ' active' : '');
       btn.textContent = code.toUpperCase();
@@ -68,7 +64,7 @@ const LANGS = {
     supportTab.textContent = t.support;
     privacyTab.href = `/privacy?lang=${currentLang}`;
     termsTab.href = `/terms?lang=${currentLang}`;
-    supportTab.href = `/support?lang=${currentLang === 'es' ? 'en' : currentLang}`;
+    supportTab.href = `/support?lang=${currentLang}`;
   }
   
   function changeLang(code) {
