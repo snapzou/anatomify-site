@@ -10,19 +10,20 @@ const LANGS = {
   const DOC_TYPE = document.body.dataset.doc;
   
   const UI = {
-    pt: { privacy: 'Privacidade', terms: 'Termos', otherLang: 'Também disponível em:' },
-    en: { privacy: 'Privacy',      terms: 'Terms',  otherLang: 'Also available in:'    },
-    es: { privacy: 'Privacidad',   terms: 'Términos', otherLang: 'También disponible en:' },
-    fr: { privacy: 'Confidentialité', terms: 'Conditions', otherLang: 'Aussi disponible en :' },
-    it: { privacy: 'Privacy',      terms: 'Termini', otherLang: 'Disponibile anche in:' },
-    de: { privacy: 'Datenschutz',  terms: 'Bedingungen', otherLang: 'Auch verfügbar in:' },
+    pt: { privacy: 'Privacidade', terms: 'Termos', support: 'Suporte', otherLang: 'Também disponível em:' },
+    en: { privacy: 'Privacy', terms: 'Terms', support: 'Support', otherLang: 'Also available in:' },
+    es: { privacy: 'Privacidad', terms: 'Términos', support: 'Soporte', otherLang: 'También disponible en:' },
+    fr: { privacy: 'Confidentialité', terms: 'Conditions', support: 'Assistance', otherLang: 'Aussi disponible en :' },
+    it: { privacy: 'Privacy', terms: 'Termini', support: 'Assistenza', otherLang: 'Disponibile anche in:' },
+    de: { privacy: 'Datenschutz', terms: 'Bedingungen', support: 'Support', otherLang: 'Auch verfügbar in:' },
   };
   
   function detectLang() {
     const params = new URLSearchParams(location.search);
     const q = params.get('lang');
-    if (q && LANGS[q]) return q;
+    if (q && LANGS[q]) return DOC_TYPE === 'support' && q === 'es' ? 'en' : q;
     const nav = (navigator.language || 'pt').slice(0, 2);
+    if (DOC_TYPE === 'support' && nav === 'es') return 'en';
     return LANGS[nav] ? nav : 'pt';
   }
   
@@ -46,7 +47,10 @@ const LANGS = {
   function renderChrome() {
     const switcher = document.getElementById('lang-switcher');
     switcher.innerHTML = '';
-    Object.keys(LANGS).forEach(code => {
+    const availableLangs = DOC_TYPE === 'support'
+      ? Object.keys(LANGS).filter(code => code !== 'es')
+      : Object.keys(LANGS);
+    availableLangs.forEach(code => {
       const btn = document.createElement('button');
       btn.className = 'lang-btn' + (code === currentLang ? ' active' : '');
       btn.textContent = code.toUpperCase();
@@ -58,10 +62,13 @@ const LANGS = {
     const t = UI[currentLang];
     const privacyTab = document.getElementById('tab-privacy');
     const termsTab = document.getElementById('tab-terms');
+    const supportTab = document.getElementById('tab-support');
     privacyTab.textContent = t.privacy;
     termsTab.textContent = t.terms;
+    supportTab.textContent = t.support;
     privacyTab.href = `/privacy?lang=${currentLang}`;
     termsTab.href = `/terms?lang=${currentLang}`;
+    supportTab.href = `/support?lang=${currentLang === 'es' ? 'en' : currentLang}`;
   }
   
   function changeLang(code) {
