@@ -1,6 +1,6 @@
 # DATENSCHUTZERKLÄRUNG — ANATOMIFY
 
-**Letzte Aktualisierung:** 10. Juli 2026
+**Letzte Aktualisierung:** 17. September 2026
 
 ## 1. Wer wir sind
 
@@ -16,10 +16,11 @@ Wir halten uns an das **Brasilianische Allgemeine Datenschutzgesetz (LGPD, Geset
 
 ## 3. Welche Daten wir sammeln
 
-**3.1. Registrierungsdaten:**
+**3.1. Registrierungs- und Identifikationsdaten:**
 - Name
 - E-Mail
 - Passwort (verschlüsselt gespeichert, nie als lesbarer Text)
+- Eindeutige Nutzer-ID (von Supabase erzeugte UUID, intern genutzt und zur Abonnementverwaltung an RevenueCat übermittelt)
 
 Wenn du dich über Google oder Apple anmeldest, erhalten wir nur die E-Mail und, wenn verfügbar, den Namen. Wir haben keinen Zugriff auf dein Google-/Apple-Passwort oder andere Daten dieser Konten.
 
@@ -47,6 +48,10 @@ Wenn du dich über Google oder Apple anmeldest, erhalten wir nur die E-Mail und,
 - Profilbild (falls du eines aus der Bibliothek oder Kamera hinzufügst)
 - Testimonials, App-Bewertungen und Feedback
 
+**3.6. Abonnementbezogene Daten (Anatomify+):**
+
+Apple verarbeitet Zahlungsdaten (auf die Anatomify keinen Zugriff hat), Kaufbestätigung, Transaktions-ID und Abonnementstatus. RevenueCat verarbeitet deine Supabase-UUID, Apple-Kaufbelege, den Abonnementverlauf (aktiv, abgelaufen, gekündigt oder Testphase) und die Region des Apple-Kontos. Anatomify speichert keine Karten-, Bank- oder Zahlungsdaten; diese werden ausschließlich von Apple verwaltet.
+
 **Wir sammeln keine sensiblen Daten** (Rasse, sexuelle Orientierung, Gesundheit, politische Meinung, biometrische Daten usw.), außer den Lerndaten selbst (die den Bildungsprozess betreffen, nicht deine Gesundheit).
 
 ## 4. Warum wir diese Daten sammeln (Zwecke)
@@ -56,6 +61,7 @@ Wenn du dich über Google oder Apple anmeldest, erhalten wir nur die E-Mail und,
 - **Nutzungsdaten**: um deinen Fortschritt zu verfolgen, Rekorde zu erstellen, deine XP zu aktualisieren, Verläufe anzuzeigen und Funktionen wie Gruppen und Ranglisten zu ermöglichen.
 - **Technische Daten**: um die Stabilität und Leistung der App zu verbessern.
 - **Foto und Testimonials**: nur zur Anzeige in deinem Profil oder in der App, mit deiner Einwilligung.
+- **Abonnementdaten**: zur Verwaltung von Anatomify+, Validierung des Abonnements, Wiederherstellung von Käufen und Erfüllung der zugehörigen Vertragspflichten.
 
 **Rechtsgrundlagen (LGPD, Art. 7 und 11):**
 - Vertragserfüllung mit dir (Nutzung des Dienstes)
@@ -67,9 +73,10 @@ Wenn du dich über Google oder Apple anmeldest, erhalten wir nur die E-Mail und,
 
 Wir nutzen die folgenden Drittanbieter, alle mit angemessenen Sicherheitsrichtlinien:
 
-- **Supabase Inc.** — Datenbankspeicherung und Authentifizierung. Server können in den USA, der EU oder anderen Regionen liegen.
-- **Google LLC** — für den Login über „Weiter mit Google".
-- **Apple Inc.** — für den Login über „Weiter mit Apple".
+- **Supabase Inc.** — Speicherung und Authentifizierung. Richtlinie: supabase.com/privacy
+- **RevenueCat, Inc.** — Verwaltung von Anatomify+, Belegvalidierung und Premium-Zugriff. Richtlinie: revenuecat.com/privacy
+- **Apple Inc.** — App-Store-Zahlungen und optionale Anmeldung. Richtlinie: apple.com/legal/privacy
+- **Google LLC** — Google-Anmeldung. Richtlinie: policies.google.com/privacy
 
 Wir verkaufen, vermieten oder tauschen deine Daten nicht mit Werbetreibenden oder Geschäftspartnern.
 
@@ -79,12 +86,14 @@ Wir können verpflichtet sein, Daten mit Behörden zu teilen, im Falle einer ger
 
 ## 6. Internationale Datenübertragung
 
-Da Supabase Server außerhalb Brasiliens betreiben kann, können deine Daten in andere Länder übertragen werden. Wir tun das auf Basis der Einwilligung und vertraglicher Garantien von Supabase, in Übereinstimmung mit Art. 33 der LGPD.
+Da Supabase und RevenueCat Server außerhalb Brasiliens, vor allem in den USA, betreiben können, dürfen Daten auf Grundlage der Einwilligung und vertraglicher Garantien gemäß Art. 33 LGPD übertragen werden. Für EU-Nutzer gelten die DSGVO-Mechanismen einschließlich der Standardvertragsklauseln (SCC) der Europäischen Kommission.
 
 ## 7. Wie lange wir die Daten behalten
 
 - Solange dein Konto aktiv ist, bewahren wir alle deine Profil-, Nutzungs- und Verlaufsdaten auf.
-- Wenn du **dein Konto löschst**, werden alle direkt mit deinem Profil verknüpften Daten (Name, E-Mail, XP, Sessions, Foto usw.) innerhalb von **30 Tagen** aus unseren Systemen entfernt.
+- Aktive Abonnementdaten bleiben während der Laufzeit gespeichert. Nach Kündigung oder Ablauf wird der Verlauf bis zu 5 Jahre für Steuer-, Buchhaltungs- und Streitfallzwecke aufbewahrt.
+- Bei Kontolöschung werden Profildaten binnen 30 Tagen entfernt.
+- Daten bei RevenueCat und Apple unterliegen deren Aufbewahrungsrichtlinien und können länger als 30 Tage bestehen bleiben.
 - Einige anonymisierte Daten (aggregierte Statistiken) können unbegrenzt für interne Analyse aufbewahrt werden, da sie deine Identifizierung nicht erlauben.
 
 ## 8. Deine Rechte (LGPD, Art. 18)
@@ -128,12 +137,12 @@ Du kannst **Marketing-E-Mails jederzeit abbestellen**, indem du den Abmeldelink 
 ## 11. Geräteberechtigungen
 
 Anatomify fordert die folgenden Berechtigungen an:
-- **Push-Benachrichtigungen**: für Lernerinnerungen und Neuigkeiten
+- **Push-Benachrichtigungen**: für Erinnerungen, Neuigkeiten und Anatomify+-Hinweise
 - **Fotobibliothek**: damit du ein Profilbild auswählen kannst
 - **Kamera**: damit du ein Profilbild aufnehmen kannst
-- **App-Bewertung**: um eine Bewertung im App Store/Google Play zu erbitten
+- **App-Bewertung**: um eine Bewertung im App Store zu erbitten
 
-Du kannst jede dieser Berechtigungen jederzeit in den Einstellungen deines Geräts widerrufen.
+Diese Berechtigungen werden zur Laufzeit mit einer klaren Begründung angefordert. Du kannst sie jederzeit widerrufen, ohne die wesentliche Funktion der App zu beeinträchtigen.
 
 ## 12. Minderjährige
 

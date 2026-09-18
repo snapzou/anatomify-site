@@ -1,6 +1,6 @@
 # TERMOS DE USO — ANATOMIFY
 
-**Última atualização:** 10 de julho de 2026
+**Última atualização:** 17 de setembro de 2026
 
 ## 1. Aceitação dos termos
 
@@ -11,6 +11,10 @@ Se você tem entre 13 e 18 anos, ao aceitar estes Termos você declara que tem a
 ## 2. Sobre o Anatomify
 
 Anatomify é um aplicativo educacional voltado ao estudo de anatomia humana por meio de flashcards interativos, quizzes, plano de estudos personalizado e ferramentas de gamificação como XP, recordes e rankings.
+
+O aplicativo cobre 7 sistemas do corpo humano: esquelético, muscular, nervoso, circulatório, digestivo, respiratório e renal.
+
+O Anatomify oferece uma versão gratuita com acesso limitado e uma versão premium chamada Anatomify+ (ver seção 8), com acesso completo a todos os módulos e recursos avançados.
 
 O aplicativo é operado por **Ruben Correia de Araújo** e **Augusto da Rocha Massa**, pessoas físicas com sede em Recife, Pernambuco, Brasil. Nestes Termos, "nós", "nossos" e "Anatomify" se referem a nós dois.
 
@@ -70,24 +74,87 @@ Se você envia qualquer conteúdo pelo Anatomify (foto de perfil, avaliação, f
 
 Podemos remover conteúdo que viole estes Termos, a lei ou direitos de terceiros, a nosso critério.
 
-## 8. Assinaturas e pagamentos
+## 8. Assinaturas Anatomify+
 
-**8.1.** O Anatomify pode oferecer planos de assinatura pagos (mensais ou anuais), que serão claramente descritos no aplicativo antes da compra.
+### 8.1. Planos disponíveis
 
-**8.2.** Os pagamentos são processados pela **App Store (Apple)** ou pela **Google Play (Google)**, e não diretamente por nós. As políticas de cobrança, renovação automática, reembolso e cancelamento seguem as regras dessas plataformas.
+O Anatomify oferece três planos de assinatura pagos ("Anatomify+"):
 
-**8.3.** Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta na App Store ou Google Play, sem multa.
+- Anatomify+ Mensal — 1 mês de acesso, cobrado a cada mês.
+- Anatomify+ Semestral — 6 meses de acesso, cobrado a cada 6 meses, com 3 dias de teste gratuito antes da primeira cobrança.
+- Anatomify+ Anual — 12 meses de acesso, cobrado a cada 12 meses, com 7 dias de teste gratuito antes da primeira cobrança.
 
-**8.4.** Pedidos de reembolso devem ser feitos diretamente à App Store ou Google Play, conforme as políticas delas.
+Os preços exatos de cada plano são exibidos no aplicativo antes da compra, na moeda local do usuário conforme região da App Store.
 
-**8.5.** Se sua assinatura for cancelada, você mantém acesso aos recursos pagos até o fim do período já pago.
+### 8.2. O que o Anatomify+ inclui
+
+A assinatura Anatomify+ dá acesso a:
+
+- Todos os módulos de anatomia dos 7 sistemas do corpo humano;
+- Modo Personalizado de estudo;
+- Grupos de estudo ilimitados;
+- Estatísticas avançadas de desempenho;
+- Todos os recursos premium do aplicativo.
+
+Usuários sem assinatura têm acesso limitado a módulos específicos definidos pelo Anatomify, que podem ser alterados a qualquer momento.
+
+### 8.3. Teste gratuito
+
+Os planos Semestral e Anual incluem período de teste gratuito (3 e 7 dias respectivamente), disponíveis apenas para novos assinantes que nunca tiveram Anatomify+.
+
+Durante o teste, o usuário tem acesso completo aos recursos premium. Se o teste não for cancelado antes do término, a assinatura é ativada automaticamente e a cobrança do plano escolhido é aplicada.
+
+Para evitar cobrança, o cancelamento deve ser feito pelo menos 24 horas antes do fim do período de teste, nas configurações da conta Apple (Ajustes → Apple ID → Assinaturas).
+
+### 8.4. Renovação automática
+
+Todas as assinaturas do Anatomify+ são de renovação automática. Isso significa:
+
+- A assinatura é renovada automaticamente ao final de cada período, salvo cancelamento pelo usuário pelo menos 24 horas antes do fim do período atual.
+- A cobrança é feita na conta Apple do usuário no momento da confirmação da compra e nas renovações.
+- O preço da renovação pode ser diferente do preço original caso o Anatomify altere seus valores, respeitando as regras da Apple sobre notificação prévia de pelo menos 30 dias.
+
+### 8.5. Como cancelar
+
+O cancelamento pode ser feito a qualquer momento pelo próprio usuário, sem multa, através de:
+
+Ajustes do iPhone → seu nome → Assinaturas → Anatomify+ → Cancelar Assinatura.
+
+Após o cancelamento, o usuário mantém acesso aos recursos pagos até o fim do período já pago. Não há reembolso proporcional pelo tempo não usado.
+
+### 8.6. Pagamento e processamento
+
+Os pagamentos são processados exclusivamente pela Apple (App Store) e não diretamente pelo Anatomify. Portanto:
+
+- As políticas de cobrança, renovação, reembolso e cancelamento seguem as regras da Apple.
+- O Anatomify não armazena, coleta ou tem acesso aos dados do cartão de crédito ou meio de pagamento do usuário.
+- Utilizamos o serviço RevenueCat para gerenciar assinaturas e validar recibos de compra da Apple, mas isso não envolve armazenamento de dados de pagamento.
+
+### 8.7. Reembolso
+
+Pedidos de reembolso devem ser feitos diretamente à Apple através de:
+
+reportaproblem.apple.com
+
+O Anatomify não processa reembolsos diretamente e não tem controle sobre a decisão da Apple. Casos excepcionais podem ser levados ao suporte hello@anatomify.app, mas o reembolso final depende da política da Apple.
+
+### 8.8. Restauração de compras
+
+Se o usuário reinstalar o app ou trocar de dispositivo, pode restaurar sua assinatura Anatomify+ ativa através do botão "Restaurar compras" no aplicativo. A restauração usa a mesma conta Apple que fez a compra original.
+
+### 8.9. Alterações no serviço premium
+
+O Anatomify se reserva o direito de:
+
+- Alterar os preços dos planos, respeitando notificação prévia de 30 dias exigida pela Apple.
+- Modificar os módulos e recursos incluídos no Anatomify+.
+- Descontinuar planos ou funcionalidades, mantendo o acesso pago até o fim do período contratado.
 
 ## 9. Modificações no serviço
 
 Podemos, a qualquer momento e sem aviso prévio:
 
 - Adicionar, alterar, remover ou suspender funcionalidades
-- Ajustar planos e preços de assinatura (com aviso prévio de 30 dias para usuários assinantes)
 - Descontinuar o aplicativo, com aviso razoável a você
 
 Faremos nosso melhor pra minimizar impacto em usuários, mas o desenvolvimento contínuo do produto é essencial.

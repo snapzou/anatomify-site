@@ -1,6 +1,6 @@
 # NUTZUNGSBEDINGUNGEN — ANATOMIFY
 
-**Letzte Aktualisierung:** 10. Juli 2026
+**Letzte Aktualisierung:** 17. September 2026
 
 ## 1. Annahme der Bedingungen
 
@@ -11,6 +11,10 @@ Wenn du zwischen 13 und 18 Jahre alt bist, erklärst du mit Annahme dieser Bedin
 ## 2. Über Anatomify
 
 Anatomify ist eine Bildungs-App für das Studium der menschlichen Anatomie mit interaktiven Flashcards, Quizzen, einem personalisierten Lernplan und Gamification-Elementen wie XP, Rekorden und Ranglisten.
+
+Die App deckt 7 Systeme des menschlichen Körpers ab: Skelett-, Muskel-, Nerven-, Kreislauf-, Verdauungs-, Atmungs- und Nierensystem.
+
+Anatomify bietet eine kostenlose Version mit eingeschränktem Zugang und eine Premium-Version namens Anatomify+ (siehe Abschnitt 8) mit vollständigem Zugang zu allen Modulen und erweiterten Funktionen.
 
 Die App wird betrieben von **Ruben Correia de Araújo** und **Augusto da Rocha Massa**, natürlichen Personen mit Sitz in Recife, Pernambuco, Brasilien. In diesen Bedingungen beziehen sich „wir", „unser" und „Anatomify" auf uns beide.
 
@@ -70,24 +74,49 @@ Wenn du Inhalte über Anatomify einreichst (Profilbild, Bewertung, Feedback, Nac
 
 Wir können nach eigenem Ermessen Inhalte entfernen, die diese Bedingungen, das Gesetz oder Rechte Dritter verletzen.
 
-## 8. Abonnements und Zahlungen
+## 8. Anatomify+-Abonnements
 
-**8.1.** Anatomify kann kostenpflichtige Abonnementpläne anbieten (monatlich oder jährlich), die vor dem Kauf in der App klar beschrieben werden.
+### 8.1. Verfügbare Pläne
 
-**8.2.** Zahlungen werden vom **App Store (Apple)** oder **Google Play (Google)** verarbeitet, nicht direkt von uns. Rechnungs-, Auto-Verlängerungs-, Rückerstattungs- und Kündigungsrichtlinien folgen den Regeln dieser Plattformen.
+Anatomify bietet drei kostenpflichtige Pläne („Anatomify+"): Monatlich (1 Monat, monatliche Abrechnung), Halbjährlich (6 Monate, Abrechnung alle 6 Monate, mit 3 Tagen kostenloser Testphase) und Jährlich (12 Monate, jährliche Abrechnung, mit 7 Tagen kostenloser Testphase). Die genauen Preise werden vor dem Kauf in der lokalen Währung der App-Store-Region angezeigt.
 
-**8.3.** Du kannst dein Abonnement jederzeit in den Kontoeinstellungen im App Store oder Google Play ohne Strafgebühr kündigen.
+### 8.2. Leistungen von Anatomify+
 
-**8.4.** Rückerstattungsanfragen müssen direkt an den App Store oder Google Play gerichtet werden, gemäß deren Richtlinien.
+Das Abonnement umfasst alle Module der 7 Körpersysteme, den personalisierten Lernmodus, unbegrenzte Lerngruppen, erweiterte Leistungsstatistiken und alle Premium-Funktionen. Ohne Abonnement ist der Zugang auf von Anatomify festgelegte Module beschränkt, die jederzeit geändert werden können.
 
-**8.5.** Bei Kündigung deines Abonnements behältst du Zugriff auf kostenpflichtige Funktionen bis zum Ende der bereits bezahlten Periode.
+### 8.3. Kostenlose Testphase
+
+Die Halbjahres- und Jahrespläne enthalten 3 bzw. 7 Testtage, nur für neue Abonnenten, die noch nie Anatomify+ hatten. Währenddessen besteht voller Premium-Zugang. Ohne rechtzeitige Kündigung wird der gewählte Plan automatisch aktiviert und berechnet. Zur Vermeidung einer Abbuchung muss mindestens 24 Stunden vorher unter Einstellungen → Apple-ID → Abonnements gekündigt werden.
+
+### 8.4. Automatische Verlängerung
+
+Alle Abonnements verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Periodenende gekündigt werden. Das Apple-Konto wird bei Kaufbestätigung und Verlängerung belastet. Preise können sich unter Einhaltung der Apple-Regeln und einer Vorankündigung von mindestens 30 Tagen ändern.
+
+### 8.5. Kündigung
+
+Die kostenfreie Kündigung erfolgt unter iPhone-Einstellungen → dein Name → Abonnements → Anatomify+ → Abonnement kündigen. Der Zugang bleibt bis zum Ende des bezahlten Zeitraums bestehen; eine anteilige Erstattung erfolgt nicht.
+
+### 8.6. Zahlung und Verarbeitung
+
+Zahlungen werden ausschließlich von Apple (App Store) nach dessen Regeln verarbeitet. Anatomify speichert oder erhebt keine Zahlungsdaten und hat keinen Zugriff darauf. RevenueCat verwaltet Abonnements und validiert Apple-Kaufbelege, ohne Zahlungsdaten zu speichern.
+
+### 8.7. Rückerstattungen
+
+Anträge sind direkt bei Apple über reportaproblem.apple.com einzureichen. Anatomify bearbeitet keine Erstattungen und kontrolliert Apples Entscheidung nicht. Ausnahmefälle können an hello@anatomify.app gesendet werden; die endgültige Entscheidung trifft Apple.
+
+### 8.8. Käufe wiederherstellen
+
+Nach Neuinstallation oder Gerätewechsel kann ein aktives Abonnement über „Käufe wiederherstellen" mit demselben Apple-Konto wiederhergestellt werden.
+
+### 8.9. Änderungen am Premium-Dienst
+
+Anatomify darf Preise mit der von Apple verlangten 30-tägigen Vorankündigung ändern, enthaltene Module und Funktionen anpassen sowie Pläne oder Funktionen einstellen, wobei der bezahlte Zugang bis zum Ende der Vertragsperiode erhalten bleibt.
 
 ## 9. Änderungen am Dienst
 
 Wir können jederzeit und ohne Vorankündigung:
 
 - Funktionen hinzufügen, ändern, entfernen oder aussetzen
-- Abonnementpläne und Preise anpassen (mit 30-tägiger Vorankündigung für Abonnenten)
 - Die App einstellen, mit angemessener Vorankündigung
 
 Wir werden unser Bestes tun, um Auswirkungen auf Nutzer zu minimieren, aber kontinuierliche Produktentwicklung ist essenziell.

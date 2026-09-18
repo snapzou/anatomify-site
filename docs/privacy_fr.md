@@ -1,6 +1,6 @@
 # POLITIQUE DE CONFIDENTIALITÉ — ANATOMIFY
 
-**Dernière mise à jour :** 10 juillet 2026
+**Dernière mise à jour :** 17 septembre 2026
 
 ## 1. Qui sommes-nous
 
@@ -16,10 +16,11 @@ Nous respectons la **Loi Générale sur la Protection des Données du Brésil (L
 
 ## 3. Quelles données nous collectons
 
-**3.1. Données d'inscription :**
+**3.1. Données d'inscription et d'identification :**
 - Nom
 - Adresse e-mail
 - Mot de passe (stocké de manière chiffrée, jamais en texte lisible)
+- Identifiant unique (UUID Supabase, utilisé en interne et transmis à RevenueCat pour gérer les abonnements)
 
 Si tu choisis de te connecter via Google ou Apple, nous recevons uniquement l'e-mail et, quand disponible, le nom. Nous n'avons pas accès à ton mot de passe Google/Apple ni aux autres données de ces comptes.
 
@@ -47,6 +48,10 @@ Si tu choisis de te connecter via Google ou Apple, nous recevons uniquement l'e-
 - Photo de profil (si tu choisis d'en ajouter une via la bibliothèque ou la caméra)
 - Témoignages, évaluations de l'app et retours
 
+**3.6. Données liées aux abonnements (Anatomify+) :**
+
+Apple traite les données de paiement (inaccessibles à Anatomify), la confirmation, l'identifiant de transaction et l'état de l'abonnement. RevenueCat traite ton UUID Supabase, les reçus Apple, l'historique (actif, expiré, résilié ou en essai) et la région du compte Apple. Anatomify ne stocke aucune donnée bancaire ou de paiement, exclusivement gérée par Apple.
+
 **Nous ne collectons pas de données sensibles** (race, orientation sexuelle, santé, opinion politique, données biométriques, etc.), à l'exception des données d'étude elles-mêmes (qui concernent le processus éducatif, pas ta santé).
 
 ## 4. Pourquoi nous collectons ces données (finalités)
@@ -56,6 +61,7 @@ Si tu choisis de te connecter via Google ou Apple, nous recevons uniquement l'e-
 - **Données d'utilisation** : pour suivre ta progression, générer des records, mettre à jour ton XP, afficher des historiques et permettre des fonctionnalités comme les groupes et classements.
 - **Données techniques** : pour améliorer la stabilité et la performance de l'application.
 - **Photo et témoignages** : uniquement pour l'affichage dans ton profil ou dans l'application, avec ton consentement.
+- **Données d'abonnement** : pour gérer Anatomify+, valider l'abonnement, restaurer les achats et remplir les obligations contractuelles associées.
 
 **Bases légales (LGPD, arts. 7 et 11) :**
 - Exécution d'un contrat avec toi (utilisation du service)
@@ -67,9 +73,10 @@ Si tu choisis de te connecter via Google ou Apple, nous recevons uniquement l'e-
 
 Nous utilisons les services tiers suivants, tous avec des politiques de sécurité adéquates :
 
-- **Supabase Inc.** — stockage de base de données et authentification. Les serveurs peuvent être situés aux États-Unis, dans l'Union européenne ou dans d'autres régions.
-- **Google LLC** — pour la connexion via « Continuer avec Google ».
-- **Apple Inc.** — pour la connexion via « Continuer avec Apple ».
+- **Supabase Inc.** — stockage et authentification. Politique : supabase.com/privacy
+- **RevenueCat, Inc.** — gestion d'Anatomify+, validation des reçus et accès payant. Politique : revenuecat.com/privacy
+- **Apple Inc.** — paiements App Store et connexion facultative. Politique : apple.com/legal/privacy
+- **Google LLC** — connexion avec Google. Politique : policies.google.com/privacy
 
 Nous ne vendons pas, ne louons pas et n'échangeons pas tes données avec des annonceurs ou partenaires commerciaux.
 
@@ -79,12 +86,14 @@ Nous pouvons être obligés de partager des données avec des autorités publiqu
 
 ## 6. Transfert international de données
 
-Comme Supabase peut faire fonctionner des serveurs en dehors du Brésil, tes données peuvent être transférées vers d'autres pays. Nous le faisons sur la base du consentement et des garanties contractuelles offertes par Supabase, conformément à l'art. 33 de la LGPD.
+Supabase et RevenueCat pouvant exploiter des serveurs hors du Brésil, principalement aux États-Unis, les données peuvent être transférées sur la base du consentement et de garanties contractuelles, conformément à l'art. 33 de la LGPD. Pour l'Union européenne, les mécanismes du RGPD s'appliquent, notamment les clauses contractuelles types (SCC) de la Commission européenne.
 
 ## 7. Combien de temps nous conservons les données
 
 - Tant que ton compte est actif, nous conservons toutes tes données de profil, d'utilisation et d'historique.
-- Si tu **supprimes ton compte**, toutes les données directement liées à ton profil (nom, e-mail, XP, sessions, photo, etc.) sont supprimées de nos systèmes dans un délai de **30 jours**.
+- Les données d'un abonnement actif sont conservées pendant sa durée. Après résiliation ou expiration, l'historique est conservé jusqu'à 5 ans à des fins fiscales, comptables et de litige.
+- Si tu supprimes ton compte, les données de profil sont supprimées sous 30 jours.
+- Les données chez RevenueCat et Apple suivent leurs politiques et peuvent subsister au-delà de 30 jours.
 - Certaines données anonymisées (statistiques agrégées) peuvent être conservées indéfiniment pour analyse interne, car elles ne permettent pas ton identification.
 
 ## 8. Tes droits (LGPD, art. 18)
@@ -128,12 +137,12 @@ Tu peux **te désabonner des e-mails de marketing** à tout moment en cliquant s
 ## 11. Autorisations de l'appareil
 
 Anatomify demande les autorisations suivantes :
-- **Notifications push** : pour les rappels d'étude et les nouveautés
+- **Notifications push** : pour les rappels, nouveautés et alertes Anatomify+
 - **Bibliothèque de photos** : pour que tu choisisses une photo de profil
 - **Caméra** : pour que tu prennes une photo de profil
-- **Évaluation de l'app** : pour demander une évaluation sur l'App Store/Google Play
+- **Évaluation de l'app** : pour demander une évaluation sur l'App Store
 
-Tu peux révoquer chacune de ces autorisations dans les paramètres de ton appareil à tout moment.
+Ces autorisations sont demandées pendant l'utilisation avec une explication claire. Tu peux les révoquer à tout moment sans affecter le fonctionnement essentiel de l'application.
 
 ## 12. Mineurs
 

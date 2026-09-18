@@ -1,6 +1,6 @@
 # POLÍTICA DE PRIVACIDADE — ANATOMIFY
 
-**Última atualização:** 10 de julho de 2026
+**Última atualização:** 17 de setembro de 2026
 
 ## 1. Quem somos
 
@@ -16,10 +16,11 @@ Cumprimos a **Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018)**, e 
 
 ## 3. Quais dados coletamos
 
-**3.1. Dados de cadastro:**
+**3.1. Dados de cadastro e identificação:**
 - Nome
 - E-mail
 - Senha (armazenada de forma criptografada, nunca em texto legível)
+- ID único do usuário (UUID gerado pelo Supabase, usado internamente e enviado ao RevenueCat para gerenciar assinaturas)
 
 Se você optar por entrar via Google ou Apple, recebemos apenas o e-mail e, quando disponível, o nome. Não temos acesso à sua senha do Google/Apple nem a outros dados dessas contas.
 
@@ -47,6 +48,22 @@ Se você optar por entrar via Google ou Apple, recebemos apenas o e-mail e, quan
 - Foto de perfil (se você optar por adicionar via biblioteca ou câmera)
 - Depoimentos, avaliações do app e feedback
 
+**3.6. Dados relacionados a assinaturas (Anatomify+):**
+
+Quando você adquire ou tenta adquirir uma assinatura Anatomify+, os seguintes dados são processados:
+
+Pela Apple (App Store):
+- Dados de pagamento (cartão, Apple Pay, etc.) — o Anatomify não tem acesso a essas informações.
+- Confirmação de compra, ID da transação e status da assinatura.
+
+Pelo RevenueCat (parceiro de gerenciamento de assinaturas):
+- Seu ID único de usuário (UUID gerado pelo Supabase).
+- Recibos de compra emitidos pela Apple para validação da assinatura.
+- Histórico de assinaturas (ativa, expirada, cancelada, em teste gratuito).
+- País/região configurada na sua conta Apple.
+
+O Anatomify não armazena números de cartão de crédito, dados bancários ou qualquer meio de pagamento. Todas essas informações são gerenciadas exclusivamente pela Apple.
+
 **Não coletamos dados sensíveis** (raça, orientação sexual, saúde, opinião política, dados biométricos, etc.), exceto os dados de estudo em si (que se referem ao processo educacional, não à sua saúde).
 
 ## 4. Por que coletamos esses dados (finalidades)
@@ -56,6 +73,7 @@ Se você optar por entrar via Google ou Apple, recebemos apenas o e-mail e, quan
 - **Dados de uso**: para acompanhar seu progresso, gerar recordes, atualizar seu XP, exibir históricos e permitir funcionalidades como grupos e rankings.
 - **Dados técnicos**: para melhorar a estabilidade e o desempenho do aplicativo.
 - **Foto e depoimentos**: apenas para exibição no seu perfil ou no aplicativo, mediante seu consentimento.
+- **Dados de assinatura**: para gerenciar seu acesso ao Anatomify+, validar sua assinatura, restaurar compras em outros dispositivos e cumprir obrigações contratuais relacionadas à assinatura.
 
 **Bases legais (LGPD, art. 7 e 11):**
 - Execução de contrato com você (uso do serviço)
@@ -67,9 +85,10 @@ Se você optar por entrar via Google ou Apple, recebemos apenas o e-mail e, quan
 
 Usamos os seguintes serviços de terceiros, todos com políticas de segurança adequadas:
 
-- **Supabase Inc.** — armazenamento de banco de dados e autenticação. Servidores podem estar localizados nos Estados Unidos, na União Europeia ou em outras regiões.
-- **Google LLC** — para o login via "Continuar com Google".
-- **Apple Inc.** — para o login via "Continuar com Apple".
+- **Supabase Inc.** — armazenamento de banco de dados e autenticação. Servidores podem estar localizados nos Estados Unidos, na União Europeia ou em outras regiões. Política de privacidade: supabase.com/privacy
+- **RevenueCat, Inc.** — gerenciamento de assinaturas premium (Anatomify+), validação de recibos de compra e controle de acesso a recursos pagos. Política de privacidade: revenuecat.com/privacy
+- **Apple Inc.** — processamento de pagamentos de assinatura via App Store, além de login opcional via "Continuar com Apple". Política de privacidade: apple.com/legal/privacy
+- **Google LLC** — para o login via "Continuar com Google". Política de privacidade: policies.google.com/privacy
 
 Não vendemos, alugamos ou trocamos seus dados com anunciantes ou parceiros comerciais.
 
@@ -79,12 +98,17 @@ Podemos ser obrigados a compartilhar dados com autoridades públicas em caso de 
 
 ## 6. Transferência internacional de dados
 
-Como o Supabase pode operar servidores fora do Brasil, seus dados podem ser transferidos para outros países. Fazemos isso com base no consentimento e nas garantias contratuais oferecidas pelo Supabase, em conformidade com o art. 33 da LGPD.
+Como o Supabase e o RevenueCat podem operar servidores fora do Brasil (principalmente nos Estados Unidos), seus dados podem ser transferidos para outros países. Fazemos isso com base no consentimento e nas garantias contratuais oferecidas por esses parceiros, em conformidade com o art. 33 da LGPD.
+
+Quando aplicável a usuários da União Europeia, garantimos que essas transferências seguem os mecanismos previstos pelo GDPR, incluindo Cláusulas Contratuais Padrão (SCC) da Comissão Europeia.
 
 ## 7. Por quanto tempo mantemos os dados
 
 - Enquanto sua conta estiver ativa, mantemos todos os seus dados de perfil, uso e histórico.
-- Se você **excluir sua conta**, todos os dados vinculados diretamente ao seu perfil (nome, e-mail, XP, sessões, foto, etc.) são apagados dos nossos sistemas em até **30 dias**.
+- Dados de assinatura ativa (Anatomify+) são mantidos enquanto a assinatura estiver vigente.
+- Após o cancelamento ou expiração de uma assinatura, o histórico é mantido por até 5 anos para fins fiscais, contábeis e de eventual disputa, conforme legislação brasileira e políticas da Apple.
+- Se você excluir sua conta, todos os dados de perfil vinculados diretamente ao seu perfil (nome, e-mail, XP, sessões, foto, etc.) são apagados dos nossos sistemas em até 30 dias.
+- Dados de assinatura mantidos no RevenueCat e na Apple seguem as políticas de retenção desses provedores e podem ser mantidos além dos 30 dias.
 - Alguns dados anonimizados (estatísticas agregadas) podem ser mantidos indefinidamente para análise interna, pois não permitem sua identificação.
 
 ## 8. Seus direitos (LGPD, art. 18)
@@ -128,12 +152,12 @@ Você pode **cancelar os e-mails de marketing** a qualquer momento clicando no l
 ## 11. Permissões do dispositivo
 
 O Anatomify solicita as seguintes permissões:
-- **Notificações push**: para lembretes de estudo e novidades
+- **Notificações push**: para lembretes de estudo, novidades e alertas sobre sua assinatura Anatomify+
 - **Biblioteca de fotos**: para você escolher uma foto de perfil
 - **Câmera**: para você tirar uma foto de perfil
-- **Avaliação do app**: para pedir avaliação na App Store/Google Play
+- **Avaliação do app**: para pedir avaliação na App Store
 
-Você pode revogar qualquer uma dessas permissões nas configurações do seu dispositivo a qualquer momento.
+Todas essas permissões são solicitadas em tempo de execução, com explicação clara do motivo. Você pode revogar qualquer uma delas nas configurações do seu dispositivo a qualquer momento, sem afetar o funcionamento essencial do aplicativo.
 
 ## 12. Menores de idade
 
